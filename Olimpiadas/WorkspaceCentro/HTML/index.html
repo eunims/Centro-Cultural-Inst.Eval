@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- INICIO: Metadatos, tipografías y estilos del sitio -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conocé los talleres, actividades y propuestas del Centro Cultural La Estación de Creatividad.">
+    <title>Centro Cultural La Estación de Creatividad | Caleta Olivia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../JS/interactividad.js" defer></script>
+    <!-- FIN: Metadatos, tipografías y estilos del sitio -->
+</head>
+<body>
+    <!-- INICIO: Encabezado y navegación compartida -->
+    <header class="encabezado">
+        <nav class="barra-navegacion" aria-label="Navegación principal">
+            <a class="marca" href="index.html" aria-label="Centro Cultural, ir al inicio">
+                <img src="../CSS/recursos/emblema-centro-cultural-estacion-creatividad.svg" alt="Emblema del Centro Cultural La Estación de Creatividad">
+                <span class="marca-texto">La Estación <span>de Creatividad</span></span>
+            </a>
+            <button class="boton-menu" type="button" data-boton-menu aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">Menú</button>
+            <ul class="lista-navegacion" id="menu-principal" data-menu-principal>
+                <li><a class="enlace-navegacion" href="index.html">Inicio</a></li>
+                <li class="elemento-desplegable">
+                    <a class="enlace-navegacion" href="talleres.html">Talleres</a>
+                    <button class="control-submenu" type="button" data-alternar-submenu aria-controls="submenu-talleres" aria-expanded="false" aria-label="Mostrar talleres"></button>
+                    <ul class="submenu" id="submenu-talleres">
+                        <li><a href="arte.html">Arte</a></li>
+                        <li><a href="danza.html">Danza</a></li>
+                        <li><a href="foto.html">Fotografía</a></li>
+                        <li><a href="musica.html">Música</a></li>
+                    </ul>
+                </li>
+                <li><a class="enlace-navegacion" href="cronograma.html">Cronograma de Eventos</a></li>
+                <li><a class="enlace-navegacion enlace-preinscripcion" href="preinscripcion.html">Preinscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIN: Encabezado y navegación compartida -->
+
+    <main>
+        <!-- INICIO: Slider principal de propuestas del Centro Cultural -->
+        <section class="seccion-deslizador" aria-label="Propuestas destacadas del Centro Cultural">
+            <div class="deslizador" data-deslizador>
+                <figure class="diapositiva activa" aria-hidden="false">
+                    <img src="../CSS/recursos/presentacion-danza-escenario.jpeg" alt="Presentación de danza en el escenario">
+                    <figcaption class="contenido-diapositiva">
+                        <h1>Bienvenidos al Centro Cultural La Estación de Creatividad</h1>
+                        <p>Un espacio para encontrarnos, aprender y crear en comunidad, con propuestas culturales abiertas a todas las edades.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/propuesta-artistica.jpg" alt="Propuesta artística">
+                    <figcaption class="contenido-diapositiva">
+                        <h2>Taller de Arte</h2>
+                        <p class="etiqueta-taller">Técnica: Pintura al óleo</p>
+                        <p>Explorá el color y las posibilidades del óleo en un recorrido práctico para desarrollar tu propia mirada.</p>
+                        <a class="boton" href="preinscripcion.html">Más información</a>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/actividad-danza-centro-cultural.jpeg" alt="Actividad de danza del Centro Cultural">
+                    <figcaption class="contenido-diapositiva">
+                        <h2>Taller de Danza</h2>
+                        <p class="etiqueta-taller">Técnica: Danza contemporánea</p>
+                        <p>Descubrí la danza contemporánea como una forma de expresión, exploración corporal y encuentro.</p>
+                        <a class="boton" href="preinscripcion.html">Más información</a>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/retrato-estudio-iluminacion-profesional.jpeg" alt="Retrato en estudio con iluminación profesional">
+                    <figcaption class="contenido-diapositiva">
+                        <h2>Taller de Fotografía</h2>
+                        <p class="etiqueta-taller">Técnica: Retrato en estudio</p>
+                        <p>Aprendé a construir retratos en estudio jugando con la luz, el encuadre y la expresión.</p>
+                        <a class="boton" href="preinscripcion.html">Más información</a>
+                    </figcaption>
+                </figure>
+                <div class="controles-deslizador" aria-label="Controles del slider">
+                    <button class="control-diapositiva" type="button" data-diapositiva-anterior aria-label="Diapositiva anterior">&larr;</button>
+                    <button class="control-diapositiva" type="button" data-diapositiva-siguiente aria-label="Diapositiva siguiente">&rarr;</button>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Slider principal de propuestas del Centro Cultural -->
+
+        <!-- INICIO: Las cuatro estaciones como identidad de los talleres -->
+        <section class="seccion-estaciones" aria-labelledby="titulo-estaciones">
+            <div class="contenedor">
+                <div class="introduccion-estaciones">
+                    <p class="etiqueta-taller">Una estación para cada forma de crear</p>
+                    <h2 id="titulo-estaciones">El año cambia.<br> La creatividad también.</h2>
+                    <p>Arte, movimiento, imagen y sonido se encuentran durante todo el año en propuestas para explorar y compartir.</p>
+                </div>
+                <div class="rejilla-estaciones">
+                    <a class="tarjeta-estacion estacion-primavera" href="arte.html">
+                        <span class="numero-estacion">01 / PRIMAVERA</span>
+                        <span class="simbolo-estacion" aria-hidden="true">
+                            <svg viewBox="0 0 100 100" focusable="false">
+                                <g fill="currentColor">
+                                    <ellipse cx="50" cy="25" rx="12" ry="20"/>
+                                    <ellipse cx="50" cy="25" rx="12" ry="20" transform="rotate(72 50 50)"/>
+                                    <ellipse cx="50" cy="25" rx="12" ry="20" transform="rotate(144 50 50)"/>
+                                    <ellipse cx="50" cy="25" rx="12" ry="20" transform="rotate(216 50 50)"/>
+                                    <ellipse cx="50" cy="25" rx="12" ry="20" transform="rotate(288 50 50)"/>
+                                    <circle cx="50" cy="50" r="10"/>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="nombre-estacion">Arte</span>
+                        <span class="accion-estacion">Explorar el color <span>↗</span></span>
+                    </a>
+                    <a class="tarjeta-estacion estacion-verano" href="danza.html">
+                        <span class="numero-estacion">02 / VERANO</span>
+                        <span class="simbolo-estacion" aria-hidden="true">
+                            <svg viewBox="0 0 100 100" focusable="false">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="5">
+                                    <circle cx="50" cy="50" r="21"/>
+                                    <path d="M50 7v13m0 60v13M7 50h13m60 0h13M20 20l9 9m42 42 9 9m0-60-9 9M29 71l-9 9"/>
+                                </g>
+                                <circle cx="50" cy="50" r="12" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        <span class="nombre-estacion">Danza</span>
+                        <span class="accion-estacion">Mover el cuerpo <span>↗</span></span>
+                    </a>
+                    <a class="tarjeta-estacion estacion-otono" href="foto.html">
+                        <span class="numero-estacion">03 / OTOÑO</span>
+                        <span class="simbolo-estacion" aria-hidden="true">
+                            <svg viewBox="0 0 100 100" focusable="false">
+                                <path d="M80 15C43 17 20 32 19 57c-1 19 14 30 31 25 25-7 32-37 30-67Z" fill="currentColor"/>
+                                <path d="M25 78c17-19 31-33 50-53M47 55l-2-22m-7 41-19-3m41-27 17 2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="4"/>
+                            </svg>
+                        </span>
+                        <span class="nombre-estacion">Fotografía</span>
+                        <span class="accion-estacion">Mirar distinto <span>↗</span></span>
+                    </a>
+                    <a class="tarjeta-estacion estacion-invierno" href="musica.html">
+                        <span class="numero-estacion">04 / INVIERNO</span>
+                        <span class="simbolo-estacion" aria-hidden="true">
+                            <svg viewBox="0 0 100 100" focusable="false">
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+                                    <path d="M50 8v84M14 29l72 42M14 71l72-42"/>
+                                    <path d="m40 18 10-10 10 10m-20 64 10 10 10-10M23 44l-9-15 15 2m48 28 9 15-15-2M29 69l-15 2 9-15m48-28 15-2-9 15"/>
+                                </g>
+                            </svg>
+                        </span>
+                        <span class="nombre-estacion">Música</span>
+                        <span class="accion-estacion">Hacer sonar <span>↗</span></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Las cuatro estaciones como identidad de los talleres -->
+
+        <!-- INICIO: Historia del Centro Cultural en bloques alternados -->
+        <section class="seccion-contenido contenedor" aria-label="Historia del Centro Cultural">
+            <div class="encabezado-seccion">
+                <p class="etiqueta-taller">Nuestra comunidad</p>
+                <h2>Historia del Centro Cultural</h2>
+            </div>
+            <div class="fila-historia">
+                <img src="../CSS/recursos/espacio-cultural-encuentro-creacion.jpeg" alt="Espacio cultural de encuentro y creación">
+                <div class="texto-historia">
+                    <h3>Un lugar para encontrarnos</h3>
+                    <p>La propuesta nació como un proyecto comunitario para recuperar la mística de la antigua estación de trenes y del espacio cultural de Caleta Olivia. Queríamos convertir ese lugar en un refugio donde creadores, vecinos y personas aficionadas pudieran encontrarse con el arte.</p>
+                </div>
+            </div>
+            <div class="fila-historia alternada">
+                <img src="../CSS/recursos/participantes-compartiendo-actividad-cultural.jpeg" alt="Participantes compartiendo una actividad cultural">
+                <div class="texto-historia">
+                    <h3>Creatividad que nos une</h3>
+                    <p>Hoy buscamos mucho más que formar artistas individuales: queremos tejer una red cultural activa en la Patagonia. El intercambio entre disciplinas y generaciones nos permite aprender en comunidad y hacer crecer la creatividad que nos une.</p>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Historia del Centro Cultural en bloques alternados -->
+    </main>
+
+    <!-- INICIO: Aviso legal y pie de página -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Centro Cultural La Estación de Creatividad. Todos los derechos reservados.</p>
+    </footer>
+    <!-- FIN: Aviso legal y pie de página -->
+</body>
+</html>

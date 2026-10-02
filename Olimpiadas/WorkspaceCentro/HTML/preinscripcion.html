@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- INICIO: Metadatos, tipografías y estilos del sitio -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preinscribite a la semana de evento de cada estación del Centro Cultural La Estación de Creatividad.">
+    <title>Preinscripción | Centro Cultural La Estación de Creatividad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../JS/interactividad.js" defer></script>
+    <!-- FIN: Metadatos, tipografías y estilos del sitio -->
+
+    <!-- INICIO: Estilos propios del formulario (mover a styles.css si se prefiere) -->
+    <style>
+        .distribucion-preinscripcion { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 2rem; align-items: start; }
+        .formulario-preinscripcion { display: flex; flex-direction: column; gap: 1.1rem; }
+        .formulario-preinscripcion fieldset { border: 0; margin: 0; padding: 0; }
+        .formulario-preinscripcion legend { font-weight: 700; margin-bottom: .6rem; padding: 0; }
+        .campo { display: flex; flex-direction: column; gap: .35rem; }
+        .campo label { font-weight: 700; }
+        .campo input, .campo select, .campo textarea { font: inherit; padding: .7rem .8rem; border: 1px solid rgba(128,128,128,.5); border-radius: 8px; background: var(--color-superficie); color: inherit; }
+        .campo textarea { min-height: 120px; resize: vertical; }
+        .campo input:focus-visible, .campo select:focus-visible, .campo textarea:focus-visible { outline: 3px solid var(--color-primario); outline-offset: 1px; }
+        .campo.con-error input, .campo.con-error select { border-color: #c0392b; }
+        .error-campo { color: #c0392b; font-size: .85rem; min-height: 1em; }
+        .fila-campos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .botones-formulario { display: flex; flex-wrap: wrap; gap: .8rem; }
+        .mensaje-confirmacion { font-weight: 700; min-height: 1.2em; }
+        .lista-contacto { list-style: none; margin: 1rem 0; padding: 0; display: flex; flex-direction: column; gap: .6rem; }
+        .lista-contacto a { color: inherit; overflow-wrap: anywhere; }
+        @media (max-width: 800px) {
+            .distribucion-preinscripcion, .fila-campos { grid-template-columns: 1fr; }
+        }
+    </style>
+    <!-- FIN: Estilos propios del formulario -->
+</head>
+<body>
+    <!-- INICIO: Encabezado y navegación compartida -->
+    <header class="encabezado">
+        <nav class="barra-navegacion" aria-label="Navegación principal">
+            <a class="marca" href="index.html" aria-label="Centro Cultural, ir al inicio">
+                <img src="../CSS/recursos/emblema-centro-cultural-estacion-creatividad.svg" alt="Emblema del Centro Cultural La Estación de Creatividad">
+                <span class="marca-texto">La Estación <span>de Creatividad</span></span>
+            </a>
+            <button class="boton-menu" type="button" data-boton-menu aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">Menú</button>
+            <ul class="lista-navegacion" id="menu-principal" data-menu-principal>
+                <li><a class="enlace-navegacion" href="index.html">Inicio</a></li>
+                <li class="elemento-desplegable">
+                    <a class="enlace-navegacion" href="talleres.html">Talleres</a>
+                    <button class="control-submenu" type="button" data-alternar-submenu aria-controls="submenu-talleres" aria-expanded="false" aria-label="Mostrar talleres"></button>
+                    <ul class="submenu" id="submenu-talleres">
+                        <li><a href="arte.html">Arte</a></li>
+                        <li><a href="danza.html">Danza</a></li>
+                        <li><a href="foto.html">Fotografía</a></li>
+                        <li><a href="musica.html">Música</a></li>
+                    </ul>
+                </li>
+                <li><a class="enlace-navegacion" href="cronograma.html">Cronograma de Eventos</a></li>
+                <li><a class="enlace-navegacion enlace-preinscripcion" href="preinscripcion.html" aria-current="page">Preinscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIN: Encabezado y navegación compartida -->
+
+    <main>
+        <!-- INICIO: Presentación de la preinscripción -->
+        <section class="banner-seccion">
+            <div class="contenedor">
+                <p class="etiqueta-taller">Talleres culturales</p>
+                <h1>Preinscripción</h1>
+                <p>Elegí el taller que te interesa y completá tus datos para preinscribirte.</p>
+            </div>
+        </section>
+        <!-- FIN: Presentación de la preinscripción -->
+
+        <!-- INICIO: Formulario y datos de contacto -->
+        <div class="contenedor seccion-contenido distribucion-preinscripcion">
+            <form class="formulario-preinscripcion" id="form-preinscripcion" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>1. Elegí tu taller *</legend>
+                    <div class="campo">
+                        <label for="taller">Taller *</label>
+                        <select id="taller" name="taller" aria-describedby="error-taller" required>
+                            <option value="">Seleccioná un taller</option>
+                            <option value="arte">Arte</option>
+                            <option value="danza">Danza</option>
+                            <option value="foto">Fotografía</option>
+                            <option value="musica">Música</option>
+                        </select>
+                        <small class="error-campo" id="error-taller" aria-live="polite"></small>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Tus datos</legend>
+                    <div class="formulario-preinscripcion">
+                        <div class="campo">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellido" autocomplete="name" required>
+                            <small class="error-campo" id="error-nombre" aria-live="polite"></small>
+                        </div>
+                        <div class="campo">
+                            <label for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required>
+                            <small class="error-campo" id="error-email" aria-live="polite"></small>
+                        </div>
+                        <div class="fila-campos">
+                            <div class="campo">
+                                <label for="telefono">Teléfono *</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono" autocomplete="tel" required>
+                                <small class="error-campo" id="error-telefono" aria-live="polite"></small>
+                            </div>
+                            <div class="campo">
+                                <label for="edad">Edad *</label>
+                                <input type="number" id="edad" name="edad" placeholder="Tu edad" min="5" max="99" required>
+                                <small class="error-campo" id="error-edad" aria-live="polite"></small>
+                            </div>
+                        </div>
+                        <div class="campo">
+                            <label for="mensaje">Mensaje (opcional)</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje..."></textarea>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="botones-formulario">
+                    <button type="submit" class="boton">Enviar preinscripción</button>
+                    <button type="reset" class="boton boton-secundario">Limpiar formulario</button>
+                </div>
+                <p class="mensaje-confirmacion" id="mensaje-confirmacion" role="status" aria-live="polite"></p>
+            </form>
+
+            <aside class="tarjeta-informacion" aria-labelledby="titulo-contacto">
+                <h2 id="titulo-contacto">Estamos para ayudarte</h2>
+                <p>Si tenés alguna duda, podés contactarnos por:</p>
+                <ul class="lista-contacto">
+                    <li>✉️ <a href="mailto:contacto@laestaciondecreatividad.com">@laestaciondecreatividad.com</a></li>
+                    <li>📞 297 XXX XXXX</li>
+                    <li>📍 Caleta Olivia, Santa Cruz</li>
+                </ul>
+            </aside>
+        </div>
+        <!-- FIN: Formulario y datos de contacto -->
+    </main>
+
+    <!-- INICIO: Aviso legal y pie de página -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Centro Cultural La Estación de Creatividad. Todos los derechos reservados.</p>
+    </footer>
+    <!-- FIN: Aviso legal y pie de página -->
+
+    <!-- INICIO: Validación del formulario y preselección del taller -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const formulario = document.getElementById('form-preinscripcion');
+            const confirmacion = document.getElementById('mensaje-confirmacion');
+            if (!formulario) return;
+
+            const reglas = {
+                taller: (valor) => valor ? '' : 'Elegí un taller.',
+                nombre: (v) => v.trim().length < 3 ? 'Ingresá tu nombre completo.' : '',
+                email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : 'Ingresá un correo válido.',
+                telefono: (v) => v.replace(/\D/g, '').length < 8 ? 'Ingresá un teléfono válido.' : '',
+                edad: (v) => (Number(v) >= 5 && Number(v) <= 99) ? '' : 'La edad debe estar entre 5 y 99.'
+            };
+
+            const validarCampo = (nombre) => {
+                const campo = formulario.elements[nombre];
+                const valor = campo.value;
+                const mensaje = reglas[nombre](valor);
+                document.getElementById('error-' + nombre).textContent = mensaje;
+                campo.closest('.campo').classList.toggle('con-error', Boolean(mensaje));
+                campo.setAttribute('aria-invalid', String(Boolean(mensaje)));
+                return !mensaje;
+            };
+
+            Object.keys(reglas).forEach((nombre) => {
+                formulario.elements[nombre].addEventListener('blur', () => validarCampo(nombre));
+                formulario.elements[nombre].addEventListener('change', () => validarCampo(nombre));
+            });
+
+            formulario.addEventListener('submit', (evento) => {
+                evento.preventDefault();
+                const resultados = Object.keys(reglas).map(validarCampo);
+                if (resultados.every(Boolean)) {
+                    confirmacion.textContent = '¡Gracias! Recibimos tu preinscripción y te vamos a contactar a la brevedad.';
+                    formulario.reset();
+                } else {
+                    confirmacion.textContent = '';
+                    const primerError = formulario.querySelector('[aria-invalid="true"]') || formulario.elements.taller;
+                    primerError.focus();
+                }
+            });
+
+            formulario.addEventListener('reset', () => {
+                confirmacion.textContent = '';
+                Object.keys(reglas).forEach((nombre) => {
+                    document.getElementById('error-' + nombre).textContent = '';
+                    formulario.elements[nombre].closest('.campo').classList.remove('con-error');
+                    formulario.elements[nombre].removeAttribute('aria-invalid');
+                });
+            });
+        });
+    </script>
+    <!-- FIN: Validación del formulario y preselección del taller -->
+</body>
+</html>

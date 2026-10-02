@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 520" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <pattern id="textura" width="52" height="52" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0v52" stroke="#fffaf1" stroke-opacity=".035" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <path fill="#302621" d="M0 0h1600v520H0z"/>
+  <path fill="url(#textura)" d="M0 0h1600v520H0z"/>
+  <g fill="none" stroke="#f4eee3" stroke-opacity=".09">
+    <circle cx="1375" cy="72" r="190"/>
+    <circle cx="1375" cy="72" r="220"/>
+    <circle cx="1375" cy="72" r="276"/>
+    <circle cx="1375" cy="72" r="344"/>
+  </g>
+  <g>
+    <path fill="#64556c" d="M1380 520v-12h200v12z"/>
+    <path fill="#71804b" d="M1404 496v-12h176v12z"/>
+    <path fill="#b67a2e" d="M1428 472v-12h152v12z"/>
+    <path fill="#c75b3d" d="M1452 448v-12h128v12z"/>
+  </g>
+</svg>

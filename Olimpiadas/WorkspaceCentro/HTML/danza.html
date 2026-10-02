@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- INICIO: Metadatos, tipografías y estilos del taller -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conocé la metodología, los objetivos y la información del Taller de Danza.">
+    <title>Taller de Danza | Centro Cultural La Estación de Creatividad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../JS/interactividad.js" defer></script>
+    <!-- FIN: Metadatos, tipografías y estilos del taller -->
+</head>
+<body class="taller-danza">
+    <!-- INICIO: Encabezado y navegación compartida -->
+    <header class="encabezado">
+        <nav class="barra-navegacion" aria-label="Navegación principal">
+            <a class="marca" href="index.html" aria-label="Centro Cultural, ir al inicio">
+                <img src="../CSS/recursos/emblema-centro-cultural-estacion-creatividad.svg" alt="Emblema del Centro Cultural La Estación de Creatividad">
+                <span class="marca-texto">La Estación <span>de Creatividad</span></span>
+            </a>
+            <button class="boton-menu" type="button" data-boton-menu aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">Menú</button>
+            <ul class="lista-navegacion" id="menu-principal" data-menu-principal>
+                <li><a class="enlace-navegacion" href="index.html">Inicio</a></li>
+                <li class="elemento-desplegable">
+                    <a class="enlace-navegacion" href="talleres.html">Talleres</a>
+                    <button class="control-submenu" type="button" data-alternar-submenu aria-controls="submenu-talleres" aria-expanded="false" aria-label="Mostrar talleres"></button>
+                    <ul class="submenu" id="submenu-talleres">
+                        <li><a href="arte.html">Arte</a></li>
+                        <li><a href="danza.html">Danza</a></li>
+                        <li><a href="foto.html">Fotografía</a></li>
+                        <li><a href="musica.html">Música</a></li>
+                    </ul>
+                </li>
+                <li><a class="enlace-navegacion" href="cronograma.html">Cronograma de Eventos</a></li>
+                <li><a class="enlace-navegacion enlace-preinscripcion" href="preinscripcion.html">Preinscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIN: Encabezado y navegación compartida -->
+
+    <main>
+        <!-- INICIO: Recorrido de seis técnicas del Taller de Danza -->
+        <section class="seccion-deslizador" aria-label="Recorrido integral del Taller de Danza">
+            <div class="deslizador" data-deslizador>
+                <figure class="diapositiva activa" aria-hidden="false">
+                    <img src="../CSS/recursos/sala-danza-vacia.jpeg" alt="Sala de danza preparada para el taller">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Taller de Danza · Verano</p>
+                        <h1>Estructura y Recorrido del Taller</h1>
+                        <p>Este trayecto integral reúne seis técnicas y programas específicos. Podés explorarlos en profundidad y elegir los recorridos que mejor acompañen tus intereses.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/bailarines-practicando-danza-contemporanea.jpeg" alt="Bailarines practicando danza contemporánea">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 1 · Danza</p>
+                        <h2>Danza Contemporánea</h2>
+                        <p>Explorá el movimiento, el espacio y la relación con la música para crear desde el cuerpo. Practicá herramientas de técnica, presencia y expresión.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/retrato-bailarina-aire-libre.jpeg" alt="Retrato de una bailarina al aire libre">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 2 · Danza</p>
+                        <h2>Expresión Corporal</h2>
+                        <p>Usá el cuerpo como medio para comunicar ideas, emociones y relatos. Trabajá la conciencia corporal y la exploración de gestos y calidades de movimiento.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/grupo-practicando-secuencia-danza.jpeg" alt="Grupo practicando secuencia de danza">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 3 · Danza</p>
+                        <h2>Improvisación y Ritmo</h2>
+                        <p>Respondé al pulso, al sonido y a las propuestas del grupo a través de secuencias espontáneas. Entrená la escucha, la coordinación y la disponibilidad para improvisar.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/coreografia-grupal-iluminada-escenario.jpeg" alt="Coreografía grupal iluminada en escenario">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 4 · Danza</p>
+                        <h2>Danza Jazz</h2>
+                        <p>Conocé una danza dinámica que combina energía, musicalidad y precisión. Practicá pasos, coordinación y secuencias con distintos ritmos.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/siluetas-bailarines-escenario.jpeg" alt="Siluetas de bailarines sobre escenario">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 5 · Danza</p>
+                        <h2>Composición Coreográfica</h2>
+                        <p>Transformá ideas y movimientos en una pieza con intención y estructura. Aprendé a organizar secuencias, recorridos y dinámicas en grupo.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/clase-elongacion-alineacion-corporal.jpeg" alt="Clase de elongación y alineación corporal">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 6 · Danza</p>
+                        <h2>Movimiento y Alineación</h2>
+                        <p>Desarrollá equilibrio, postura y conciencia del cuerpo en movimiento. Incorporá principios de alineación para bailar con mayor control y cuidado.</p>
+                    </figcaption>
+                </figure>
+                <div class="controles-deslizador" aria-label="Controles del slider">
+                    <button class="control-diapositiva" type="button" data-diapositiva-anterior aria-label="Diapositiva anterior">Anterior</button>
+                    <button class="control-diapositiva" type="button" data-diapositiva-siguiente aria-label="Diapositiva siguiente">Siguiente</button>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Recorrido de seis técnicas del Taller de Danza -->
+
+        <!-- INICIO: Información del taller en dos columnas -->
+        <div class="contenedor distribucion-taller">
+            <div class="contenido-principal-taller">
+                <section>
+                    <h2>Metodología</h2>
+                    <p>Las clases combinan práctica y taller abierto: vas a experimentar libremente con las seis técnicas, desarrollar recursos propios y recibir acompañamiento personalizado para avanzar a tu ritmo.</p>
+                </section>
+                <section>
+                    <h2>Objetivos</h2>
+                    <p>La propuesta busca que desarrolles un lenguaje expresivo propio, incorpores recursos técnicos diversos y lleves adelante proyectos individuales o colectivos.</p>
+                </section>
+                <section>
+                    <h2>Beneficios</h2>
+                    <p>Vas a poder utilizar materiales y herramientas del Centro, compartir tus producciones en muestras comunitarias y fortalecer tu creatividad en un espacio de encuentro.</p>
+                </section>
+            </div>
+            <aside class="tarjeta-informacion" aria-labelledby="titulo-informacion">
+                <h2 id="titulo-informacion">Información del Taller</h2>
+                <dl>
+                    <dt>Requisitos</dt><dd>Ropa cómoda y ganas de moverse.</dd>
+                    <dt>Duración</dt><dd>Ocho encuentros.</dd>
+                    <dt>Horario</dt><dd>Lunes y miércoles, de 19:00 a 20:30.</dd>
+                </dl>
+                <p class="aviso-cupos cupos-agotados">Últimos cupos / Lista de espera</p>
+                <a class="boton boton-deshabilitado" href="preinscripcion.html?taller=danza">Sumarme a Lista de Espera</a>
+            </aside>
+        </div>
+        <!-- FIN: Información del taller en dos columnas -->
+
+        <!-- INICIO: Galería de imágenes del taller -->
+        <section class="contenedor seccion-contenido" aria-labelledby="titulo-galeria">
+            <div class="encabezado-seccion">
+                <h2 id="titulo-galeria">Galería del Taller</h2>
+                <p class="texto-galeria">Un espacio para explorar el movimiento, encontrarse y crear en comunidad.</p>
+            </div>
+            <div class="galeria-deslizable">
+                <button class="miniatura-galeria" type="button" data-miniatura-galeria aria-label="Ampliar imagen de la galería"><img src="../CSS/recursos/bailarines-movimiento-escenico.jpeg" alt="Bailarines en movimiento escénico"></button>
+                <button class="miniatura-galeria" type="button" data-miniatura-galeria aria-label="Ampliar imagen de la galería"><img src="../CSS/recursos/practica-pasos-estudio-danza.jpeg" alt="Práctica de pasos en el estudio de danza"></button>
+                <button class="miniatura-galeria" type="button" data-miniatura-galeria aria-label="Ampliar imagen de la galería"><img src="../CSS/recursos/ejercicio-movimiento-expresivo.jpeg" alt="Ejercicio de movimiento expresivo"></button>
+                <button class="miniatura-galeria" type="button" data-miniatura-galeria aria-label="Ampliar imagen de la galería"><img src="../CSS/recursos/danza-colectiva-mar.jpeg" alt="Danza colectiva junto al mar"></button>
+            </div>
+        </section>
+        <!-- FIN: Galería de imágenes del taller -->
+    </main>
+
+    <!-- INICIO: Aviso legal y pie de página -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Centro Cultural La Estación de Creatividad. Todos los derechos reservados.</p>
+    </footer>
+    <!-- FIN: Aviso legal y pie de página -->
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- INICIO: Metadatos, tipografías y estilos del sitio -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explorá los talleres de arte, danza, fotografía y música del Centro Cultural.">
+    <title>Talleres | Centro Cultural La Estación de Creatividad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../JS/interactividad.js" defer></script>
+    <!-- FIN: Metadatos, tipografías y estilos del sitio -->
+</head>
+<body>
+    <!-- INICIO: Encabezado y navegación compartida -->
+    <header class="encabezado">
+        <nav class="barra-navegacion" aria-label="Navegación principal">
+            <a class="marca" href="index.html" aria-label="Centro Cultural, ir al inicio">
+                <img src="../CSS/recursos/emblema-centro-cultural-estacion-creatividad.svg" alt="Emblema del Centro Cultural La Estación de Creatividad">
+                <span class="marca-texto">La Estación <span>de Creatividad</span></span>
+            </a>
+            <button class="boton-menu" type="button" data-boton-menu aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">Menú</button>
+            <ul class="lista-navegacion" id="menu-principal" data-menu-principal>
+                <li><a class="enlace-navegacion" href="index.html">Inicio</a></li>
+                <li class="elemento-desplegable">
+                    <a class="enlace-navegacion" href="talleres.html">Talleres</a>
+                    <button class="control-submenu" type="button" data-alternar-submenu aria-controls="submenu-talleres" aria-expanded="false" aria-label="Mostrar talleres"></button>
+                    <ul class="submenu" id="submenu-talleres">
+                        <li><a href="arte.html">Arte</a></li>
+                        <li><a href="danza.html">Danza</a></li>
+                        <li><a href="foto.html">Fotografía</a></li>
+                        <li><a href="musica.html">Música</a></li>
+                    </ul>
+                </li>
+                <li><a class="enlace-navegacion" href="cronograma.html">Cronograma de Eventos</a></li>
+                <li><a class="enlace-navegacion enlace-preinscripcion" href="preinscripcion.html">Preinscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIN: Encabezado y navegación compartida -->
+
+    <main>
+        <!-- INICIO: Presentación del catálogo de talleres -->
+        <section class="banner-seccion">
+            <div class="contenedor">
+                <p class="etiqueta-taller">Una comunidad. Cuatro estaciones.</p>
+                <h1>Talleres para crear y compartir</h1>
+                <p>Elegí tu espacio y viví la experiencia creativa.</p>
+                <nav class="navegacion-estaciones" aria-label="Ir a un taller">
+                    <a href="#taller-arte"><span>01</span> Primavera</a>
+                    <a href="#taller-danza"><span>02</span> Verano</a>
+                    <a href="#taller-fotografia"><span>03</span> Otoño</a>
+                    <a href="#taller-musica"><span>04</span> Invierno</a>
+                </nav>
+            </div>
+        </section>
+        <!-- FIN: Presentación del catálogo de talleres -->
+
+        <!-- INICIO: Tarjetas de talleres disponibles -->
+        <section class="seccion-contenido contenedor" aria-label="Talleres disponibles">
+            <div class="cuadricula-talleres">
+                <article class="tarjeta-taller estacion-primavera" id="taller-arte">
+                    <img src="../CSS/recursos/montaje-obra-artistica.jpeg" alt="Montaje de una obra artística">
+                    <div class="contenido-tarjeta">
+                        <p class="sello-estacion">01 <span>Primavera</span></p>
+                        <h2>Taller de Arte</h2>
+                        <p>En primavera, explorá el color y las formas a través de distintas técnicas artísticas. Conocé el recorrido del taller y encontrá tu manera de crear.</p>
+                        <a class="boton boton-secundario" href="arte.html">Más información</a>
+                    </div>
+                </article>
+                <article class="tarjeta-taller estacion-verano" id="taller-danza">
+                    <img src="../CSS/recursos/taller-danza-grupo.jpeg" alt="Taller de danza en grupo">
+                    <div class="contenido-tarjeta">
+                        <p class="sello-estacion">02 <span>Verano</span></p>
+                        <h2>Taller de Danza</h2>
+                        <p>En verano, el cuerpo encuentra nuevos ritmos y formas de expresarse. Sumate a un espacio para bailar, explorar y compartir movimiento.</p>
+                        <a class="boton boton-secundario" href="danza.html">Más información</a>
+                    </div>
+                </article>
+                <article class="tarjeta-taller estacion-otono" id="taller-fotografia">
+                    <img src="../CSS/recursos/coleccion-camaras-fotograficas-antiguas.jpeg" alt="Colección de cámaras fotográficas antiguas">
+                    <div class="contenido-tarjeta">
+                        <p class="sello-estacion">03 <span>Otoño</span></p>
+                        <h2>Taller de Fotografía</h2>
+                        <p>El otoño invita a observar la luz, los paisajes y sus cambios. Aprendé fotografía y contá historias desde una mirada propia.</p>
+                        <a class="boton boton-secundario" href="foto.html">Más información</a>
+                    </div>
+                </article>
+                <article class="tarjeta-taller estacion-invierno" id="taller-musica">
+                    <img src="../CSS/recursos/piano-sala-calida.jpeg" alt="Piano en una sala de ambiente cálido">
+                    <div class="contenido-tarjeta">
+                        <p class="sello-estacion">04 <span>Invierno</span></p>
+                        <h2>Taller de Música</h2>
+                        <p>En invierno, la música nos reúne y acompaña. Explorá ritmos, instrumentos y sonidos en una propuesta para crear en grupo.</p>
+                        <a class="boton boton-secundario" href="musica.html">Más información</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <!-- FIN: Tarjetas de talleres disponibles -->
+    </main>
+
+    <!-- INICIO: Aviso legal y pie de página -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Centro Cultural La Estación de Creatividad. Todos los derechos reservados.</p>
+    </footer>
+    <!-- FIN: Aviso legal y pie de página -->
+</body>
+</html>

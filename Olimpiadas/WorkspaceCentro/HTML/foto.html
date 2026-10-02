@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- INICIO: Metadatos, tipografías y estilos del taller -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conocé la metodología, los objetivos y la información del Taller de Fotografía.">
+    <title>Taller de Fotografía | Centro Cultural La Estación de Creatividad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../JS/interactividad.js" defer></script>
+    <!-- FIN: Metadatos, tipografías y estilos del taller -->
+</head>
+<body class="taller-foto">
+    <!-- INICIO: Encabezado y navegación compartida -->
+    <header class="encabezado">
+        <nav class="barra-navegacion" aria-label="Navegación principal">
+            <a class="marca" href="index.html" aria-label="Centro Cultural, ir al inicio">
+                <img src="../CSS/recursos/emblema-centro-cultural-estacion-creatividad.svg" alt="Emblema del Centro Cultural La Estación de Creatividad">
+                <span class="marca-texto">La Estación <span>de Creatividad</span></span>
+            </a>
+            <button class="boton-menu" type="button" data-boton-menu aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">Menú</button>
+            <ul class="lista-navegacion" id="menu-principal" data-menu-principal>
+                <li><a class="enlace-navegacion" href="index.html">Inicio</a></li>
+                <li class="elemento-desplegable">
+                    <a class="enlace-navegacion" href="talleres.html">Talleres</a>
+                    <button class="control-submenu" type="button" data-alternar-submenu aria-controls="submenu-talleres" aria-expanded="false" aria-label="Mostrar talleres"></button>
+                    <ul class="submenu" id="submenu-talleres">
+                        <li><a href="arte.html">Arte</a></li>
+                        <li><a href="danza.html">Danza</a></li>
+                        <li><a href="foto.html">Fotografía</a></li>
+                        <li><a href="musica.html">Música</a></li>
+                    </ul>
+                </li>
+                <li><a class="enlace-navegacion" href="cronograma.html">Cronograma de Eventos</a></li>
+                <li><a class="enlace-navegacion enlace-preinscripcion" href="preinscripcion.html">Preinscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIN: Encabezado y navegación compartida -->
+
+    <main>
+        <!-- INICIO: Recorrido de seis técnicas del Taller de Fotografía -->
+        <section class="seccion-deslizador" aria-label="Recorrido integral del Taller de Fotografía">
+            <div class="deslizador" data-deslizador>
+                <figure class="diapositiva activa" aria-hidden="false">
+                    <img src="../CSS/recursos/fotografia-paisaje-lente-ojo-pez.jpeg" alt="Paisaje fotografiado con lente ojo de pez">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Taller de Fotografía · Otoño</p>
+                        <h1>Estructura y Recorrido del Taller</h1>
+                        <p>Este trayecto integral reúne seis técnicas y programas específicos. Podés explorarlos en profundidad y elegir los recorridos que mejor acompañen tus intereses.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/grupo-fotografos-realizando-practica.jpeg" alt="Grupo de fotógrafos realizando una práctica">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 1 · Fotografía</p>
+                        <h2>Retrato en Estudio</h2>
+                        <p>Aprendé a construir retratos con intención y a generar un clima para cada imagen. Practicá encuadre, dirección de la persona y control de la luz en estudio.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/fotografia-documental-escena-urbana.jpeg" alt="Fotografía documental de escena urbana">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 2 · Fotografía</p>
+                        <h2>Fotografía Documental</h2>
+                        <p>Registrá personas, espacios y acontecimientos para contar historias con imágenes. Aprendé a observar, secuenciar fotografías y construir una mirada propia.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/retrato-luz-natural-interior.jpeg" alt="Retrato con luz natural en interior">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 3 · Fotografía</p>
+                        <h2>Composición y Luz Natural</h2>
+                        <p>Descubrí cómo la luz disponible transforma una escena y su atmósfera. Practicá encuadre, balance y composición en diferentes condiciones naturales.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/paisaje-patagonico-montanas-bosque-otonal.jpeg" alt="Paisaje patagónico, montañas y bosque otoñal">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 4 · Fotografía</p>
+                        <h2>Fotografía de Paisaje Patagónico</h2>
+                        <p>Aprendé a interpretar la amplitud, el clima y la luz del paisaje patagónico. Trabajá profundidad, escala y composición en exteriores.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/revelado-digital-fotografias-computadora.jpeg" alt="Revelado digital de fotografías en computadora">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 5 · Fotografía</p>
+                        <h2>Revelado Digital</h2>
+                        <p>Revisá y ajustá tus imágenes para expresar con claridad la intención de cada toma. Aprendé un flujo de edición digital, desde el archivo original hasta la exportación.</p>
+                    </figcaption>
+                </figure>
+                <figure class="diapositiva" aria-hidden="true">
+                    <img src="../CSS/recursos/iluminacion-estudio-produccion-audiovisual.jpeg" alt="Iluminación de estudio para producción audiovisual">
+                    <figcaption class="contenido-diapositiva">
+                        <p class="etiqueta-taller">Programa 6 · Fotografía</p>
+                        <h2>Iluminación Creativa</h2>
+                        <p>Usá fuentes, direcciones y contrastes de luz para transformar una escena. Experimentá con esquemas de iluminación y sus efectos sobre el sujeto.</p>
+                    </figcaption>
+                </figure>
+                <div class="controles-deslizador" aria-label="Controles del slider">
+                    <button class="control-diapositiva" type="button" data-diapositiva-anterior aria-label="Diapositiva anterior">Anterior</button>
+                    <button class="control-diapositiva" type="button" data-diapositiva-siguiente aria-label="Diapositiva siguiente">Siguiente</button>
+                </div>
+            </div>
+        </section>
+        <!-- FIN: Recorrido de seis técnicas del Taller de Fotografía -->
+
+        <!-- INICIO: Información del taller en dos columnas -->
+        <div class="contenedor distribucion-taller">
+            <div class="contenido-principal-taller">
+                <section>
+                    <h2>Metodología</h2>
+                    <p>Las clases combinan práctica y taller abierto: vas a experimentar libremente con las seis técnicas, desarrollar recursos propios y recibir acompañamiento personalizado para avanzar a tu ritmo.</p>
+                </section>
+                <section>
+                    <h2>Objetivos</h2>
+                    <p>La propuesta busca que desarrolles un lenguaje expresivo propio, incorpores recursos técnicos diversos y lleves adelante proyectos individuales o colectivos.</p>
+                </section>
+                <section>
+                    <h2>Beneficios</h2>
+                    <p>Vas a poder utilizar materiales y herramientas del Centro, compartir tus producciones en muestras comunitarias y fortalecer tu creatividad en un espacio de encuentro.</p>
+                </section>
+            </div>
+            <aside class="tarjeta-informacion" aria-labelledby="titulo-informacion">
+                <h2 id="titulo-informacion">Información del Taller</h2>
+                <dl>
+                    <dt>Requisitos</dt><dd>Cámara o teléfono con cámara.</dd>
+                    <dt>Duración</dt><dd>Ocho encuentros.</dd>
+                    <dt>Horario</dt><dd>Viernes, de 16:00 a 18:00.</dd>
+                </dl>
+                <p class="aviso-cupos">Cupos limitados</p>
+                <a class="boton" href="preinscripcion.html">Preinscribirme</a>
+            </aside>
+        </div>
+        <!-- FIN: Información del taller en dos columnas -->
+
+        <!-- INICIO: Galería de imágenes del taller -->
+        <section class="contenedor seccion-contenido" aria-labelledby="titulo-galeria">
+            <div class="encabezado-seccion">
+                <h2 id="titulo-galeria">Galería del Taller</h2>
+                <p class="texto-galeria">Una mirada compartida sobre la luz, las historias y los paisajes de nuestra región.</p>
+            </div>
+            <div class="galeria-deslizable">
+                <button class="miniatura-galeria" type="button" data-miniatura-galeria aria-label="Ampliar imagen de la galería"><img src="../CSS/recursos/retrato-hojas-otono.jpeg" alt="Retrato enmarcado por hojas de otoño"></button>
+                <button class="miniatura-galeria" type="button" data-miniatura-galeria aria-label="Ampliar imagen de la galería"><img src="../CSS/recursos/retrato-realizado-actividad-fotografica.jpeg" alt="Retrato realizado durante una actividad fotográfica"></button>
+                <button class="miniatura-galeria" type="button" data-miniatura-galeria aria-label="Ampliar imagen de la galería"><img src="../CSS/recursos/cantante-grabando-voz-estudio.jpeg" alt="Cantante grabando su voz en un estudio"></button>
+                <button class="miniatura-galeria" type="button" data-miniatura-galeria aria-label="Ampliar imagen de la galería"><img src="../CSS/recursos/siluetas-danza-atardecer.jpeg" alt="Siluetas de danza al atardecer"></button>
+            </div>
+        </section>
+        <!-- FIN: Galería de imágenes del taller -->
+    </main>
+
+    <!-- INICIO: Aviso legal y pie de página -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Centro Cultural La Estación de Creatividad. Todos los derechos reservados.</p>
+    </footer>
+    <!-- FIN: Aviso legal y pie de página -->
+</body>
+</html>

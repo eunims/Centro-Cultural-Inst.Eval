@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- INICIO: Metadatos, tipografías y estilos del sitio -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cronograma de las cuatro semanas de evento del Centro Cultural La Estación de Creatividad, una por estación del año.">
+    <title>Cronograma de Eventos | Centro Cultural La Estación de Creatividad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../JS/interactividad.js" defer></script>
+    <!-- FIN: Metadatos, tipografías y estilos del sitio -->
+
+    <!-- INICIO: Estilos propios de la cartelera (mover a styles.css si se prefiere) -->
+    <style>
+        .semana-estacion { margin-top: 3.5rem; scroll-margin-top: 6rem; }
+        .semana-estacion:first-of-type { margin-top: 2rem; }
+        .cabecera-semana { border-left: 6px solid var(--acento, #888); padding-left: 1rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+        .cabecera-semana h2 { margin: .2rem 0; }
+        .cabecera-semana p { margin: 0; }
+        .acciones-semana { display: flex; flex-wrap: wrap; gap: .6rem; }
+        .cartelera { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .9rem; margin-top: 1.5rem; }
+        .dia-cartelera { border: 1px solid rgba(128,128,128,.35); border-top: 4px solid var(--acento, #888); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: .6rem; }
+        .dia-cartelera h3 { margin: 0; font-size: 1.1rem; display: flex; justify-content: space-between; align-items: baseline; }
+        .dia-cartelera h3 span { font-size: .7rem; opacity: .7; letter-spacing: .08em; }
+        .dia-cartelera ul { list-style: none; margin: 0; padding: 0; }
+        .actividad b { display: block; font-size: .85rem; opacity: .85; margin-bottom: .2rem; }
+        .actividad small { display: block; opacity: .75; margin-top: .2rem; }
+        .dia-evento { background: rgba(128,128,128,.1); }
+        .e-primavera { --acento: #d9536f; }
+        .e-verano { --acento: #e8a317; }
+        .e-otono { --acento: #c7611f; }
+        .e-invierno { --acento: #3b82c4; }
+    </style>
+    <!-- FIN: Estilos propios de la cartelera -->
+</head>
+<body>
+    <!-- INICIO: Encabezado y navegación compartida -->
+    <header class="encabezado">
+        <nav class="barra-navegacion" aria-label="Navegación principal">
+            <a class="marca" href="index.html" aria-label="Centro Cultural, ir al inicio">
+                <img src="../CSS/recursos/emblema-centro-cultural-estacion-creatividad.svg" alt="Emblema del Centro Cultural La Estación de Creatividad">
+                <span class="marca-texto">La Estación <span>de Creatividad</span></span>
+            </a>
+            <button class="boton-menu" type="button" data-boton-menu aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">Menú</button>
+            <ul class="lista-navegacion" id="menu-principal" data-menu-principal>
+                <li><a class="enlace-navegacion" href="index.html">Inicio</a></li>
+                <li class="elemento-desplegable">
+                    <a class="enlace-navegacion" href="talleres.html">Talleres</a>
+                    <button class="control-submenu" type="button" data-alternar-submenu aria-controls="submenu-talleres" aria-expanded="false" aria-label="Mostrar talleres"></button>
+                    <ul class="submenu" id="submenu-talleres">
+                        <li><a href="arte.html">Arte</a></li>
+                        <li><a href="danza.html">Danza</a></li>
+                        <li><a href="foto.html">Fotografía</a></li>
+                        <li><a href="musica.html">Música</a></li>
+                    </ul>
+                </li>
+                <li><a class="enlace-navegacion" href="cronograma.html" aria-current="page">Cronograma de Eventos</a></li>
+                <li><a class="enlace-navegacion enlace-preinscripcion" href="preinscripcion.html">Preinscripción</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- FIN: Encabezado y navegación compartida -->
+
+    <main>
+        <!-- INICIO: Presentación del cronograma -->
+        <section class="banner-seccion">
+            <div class="contenedor">
+                <p class="etiqueta-taller">Una semana por estación</p>
+                <h1>Cronograma de Eventos</h1>
+                <p>Cada estación del año es una semana completa dedicada a un taller: siete días para crear, aprender y compartir.</p>
+                <nav class="navegacion-estaciones" aria-label="Ir a una estación">
+                    <a href="#primavera"><span>01</span> Primavera</a>
+                    <a href="#verano"><span>02</span> Verano</a>
+                    <a href="#otono"><span>03</span> Otoño</a>
+                    <a href="#invierno"><span>04</span> Invierno</a>
+                </nav>
+            </div>
+        </section>
+        <!-- FIN: Presentación del cronograma -->
+
+        <div class="contenedor seccion-contenido">
+
+            <!-- INICIO: Semana de Primavera - Arte -->
+            <section class="semana-estacion e-primavera" id="primavera" aria-labelledby="titulo-primavera">
+                <div class="cabecera-semana">
+                    <div>
+                        <p class="etiqueta-taller">01 / Primavera</p>
+                        <h2 id="titulo-primavera">Semana de Arte</h2>
+                        <p>Pintura al óleo, dibujo artístico, color y composición.</p>
+                    </div>
+                    <div class="acciones-semana">
+                        <a class="boton boton-secundario" href="arte.html">Ver taller</a>
+                        <a class="boton" href="preinscripcion.html?estacion=primavera">Preinscribirme</a>
+                    </div>
+                </div>
+                <div class="cartelera">
+                    <article class="dia-cartelera"><h3>Lunes <span>DÍA 1</span></h3><ul><li class="actividad"><b>18:00 – 20:00</b>Apertura y Pintura al óleo<small>Bienvenida y primera práctica</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Martes <span>DÍA 2</span></h3><ul><li class="actividad"><b>18:00 – 20:00</b>Pintura al óleo<small>Práctica guiada</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Miércoles <span>DÍA 3</span></h3><ul><li class="actividad"><b>18:00 – 20:00</b>Dibujo artístico<small>Trazo y observación</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Jueves <span>DÍA 4</span></h3><ul><li class="actividad"><b>18:00 – 20:00</b>Dibujo artístico<small>Práctica guiada</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Viernes <span>DÍA 5</span></h3><ul><li class="actividad"><b>18:00 – 20:00</b>Color y composición<small>Obra final</small></li></ul></article>
+                    <article class="dia-cartelera dia-evento"><h3>Sábado <span>DÍA 6</span></h3><ul><li class="actividad"><b>17:00 – 19:00</b>Muestra abierta<small>Obras de los participantes</small></li></ul></article>
+                    <article class="dia-cartelera dia-evento"><h3>Domingo <span>DÍA 7</span></h3><ul><li class="actividad"><b>18:00 – 20:00</b>Cierre de la semana<small>Encuentro final</small></li></ul></article>
+                </div>
+            </section>
+            <!-- FIN: Semana de Primavera - Arte -->
+
+            <!-- INICIO: Semana de Verano - Danza -->
+            <section class="semana-estacion e-verano" id="verano" aria-labelledby="titulo-verano">
+                <div class="cabecera-semana">
+                    <div>
+                        <p class="etiqueta-taller">02 / Verano</p>
+                        <h2 id="titulo-verano">Semana de Danza</h2>
+                        <p>Danza contemporánea, expresión corporal, movimiento y ritmo.</p>
+                    </div>
+                    <div class="acciones-semana">
+                        <a class="boton boton-secundario" href="danza.html">Ver taller</a>
+                        <a class="boton" href="preinscripcion.html?estacion=verano">Preinscribirme</a>
+                    </div>
+                </div>
+                <div class="cartelera">
+                    <article class="dia-cartelera"><h3>Lunes <span>DÍA 1</span></h3><ul><li class="actividad"><b>19:00 – 20:30</b>Apertura y Danza contemporánea<small>Bienvenida y primera clase</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Martes <span>DÍA 2</span></h3><ul><li class="actividad"><b>19:00 – 20:30</b>Danza contemporánea<small>Práctica guiada</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Miércoles <span>DÍA 3</span></h3><ul><li class="actividad"><b>19:00 – 20:30</b>Expresión corporal<small>Movimiento libre</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Jueves <span>DÍA 4</span></h3><ul><li class="actividad"><b>19:00 – 20:30</b>Expresión corporal<small>Práctica guiada</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Viernes <span>DÍA 5</span></h3><ul><li class="actividad"><b>19:00 – 20:30</b>Movimiento y ritmo<small>Ensayo de la coreografía</small></li></ul></article>
+                    <article class="dia-cartelera dia-evento"><h3>Sábado <span>DÍA 6</span></h3><ul><li class="actividad"><b>18:00 – 20:00</b>Muestra abierta<small>Ensayo abierto al público</small></li></ul></article>
+                    <article class="dia-cartelera dia-evento"><h3>Domingo <span>DÍA 7</span></h3><ul><li class="actividad"><b>19:00 – 20:30</b>Cierre de la semana<small>Función final</small></li></ul></article>
+                </div>
+            </section>
+            <!-- FIN: Semana de Verano - Danza -->
+
+            <!-- INICIO: Semana de Otoño - Fotografía -->
+            <section class="semana-estacion e-otono" id="otono" aria-labelledby="titulo-otono">
+                <div class="cabecera-semana">
+                    <div>
+                        <p class="etiqueta-taller">03 / Otoño</p>
+                        <h2 id="titulo-otono">Semana de Fotografía</h2>
+                        <p>Retrato en estudio, composición fotográfica, fotografía documental.</p>
+                    </div>
+                    <div class="acciones-semana">
+                        <a class="boton boton-secundario" href="foto.html">Ver taller</a>
+                        <a class="boton" href="preinscripcion.html?estacion=otono">Preinscribirme</a>
+                    </div>
+                </div>
+                <div class="cartelera">
+                    <article class="dia-cartelera"><h3>Lunes <span>DÍA 1</span></h3><ul><li class="actividad"><b>16:00 – 18:00</b>Apertura y Retrato en estudio<small>Bienvenida y primera práctica</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Martes <span>DÍA 2</span></h3><ul><li class="actividad"><b>16:00 – 18:00</b>Retrato en estudio<small>Luz y poses</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Miércoles <span>DÍA 3</span></h3><ul><li class="actividad"><b>16:00 – 18:00</b>Composición fotográfica<small>Encuadre y mirada</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Jueves <span>DÍA 4</span></h3><ul><li class="actividad"><b>16:00 – 18:00</b>Composición fotográfica<small>Salida de práctica</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Viernes <span>DÍA 5</span></h3><ul><li class="actividad"><b>16:00 – 18:00</b>Fotografía documental<small>Registro de la comunidad</small></li></ul></article>
+                    <article class="dia-cartelera dia-evento"><h3>Sábado <span>DÍA 6</span></h3><ul><li class="actividad"><b>16:00 – 18:00</b>Muestra abierta<small>Exposición de fotografías</small></li></ul></article>
+                    <article class="dia-cartelera dia-evento"><h3>Domingo <span>DÍA 7</span></h3><ul><li class="actividad"><b>16:00 – 18:00</b>Cierre de la semana<small>Encuentro final</small></li></ul></article>
+                </div>
+            </section>
+            <!-- FIN: Semana de Otoño - Fotografía -->
+
+            <!-- INICIO: Semana de Invierno - Música -->
+            <section class="semana-estacion e-invierno" id="invierno" aria-labelledby="titulo-invierno">
+                <div class="cabecera-semana">
+                    <div>
+                        <p class="etiqueta-taller">04 / Invierno</p>
+                        <h2 id="titulo-invierno">Semana de Música</h2>
+                        <p>Canto y ensamble, ritmo y percusión, exploración sonora.</p>
+                    </div>
+                    <div class="acciones-semana">
+                        <a class="boton boton-secundario" href="musica.html">Ver taller</a>
+                        <a class="boton" href="preinscripcion.html?estacion=invierno">Preinscribirme</a>
+                    </div>
+                </div>
+                <div class="cartelera">
+                    <article class="dia-cartelera"><h3>Lunes <span>DÍA 1</span></h3><ul><li class="actividad"><b>17:00 – 19:00</b>Apertura y Canto y ensamble<small>Bienvenida y primer ensayo</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Martes <span>DÍA 2</span></h3><ul><li class="actividad"><b>17:00 – 19:00</b>Canto y ensamble<small>Práctica guiada</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Miércoles <span>DÍA 3</span></h3><ul><li class="actividad"><b>17:00 – 19:00</b>Ritmo y percusión<small>Pulso y compás</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Jueves <span>DÍA 4</span></h3><ul><li class="actividad"><b>17:00 – 19:00</b>Ritmo y percusión<small>Práctica guiada</small></li></ul></article>
+                    <article class="dia-cartelera"><h3>Viernes <span>DÍA 5</span></h3><ul><li class="actividad"><b>17:00 – 19:00</b>Exploración sonora<small>Ensayo general</small></li></ul></article>
+                    <article class="dia-cartelera dia-evento"><h3>Sábado <span>DÍA 6</span></h3><ul><li class="actividad"><b>17:00 – 19:00</b>Muestra abierta<small>Ensayo abierto al público</small></li></ul></article>
+                    <article class="dia-cartelera dia-evento"><h3>Domingo <span>DÍA 7</span></h3><ul><li class="actividad"><b>17:00 – 19:00</b>Cierre de la semana<small>Concierto final</small></li></ul></article>
+                </div>
+            </section>
+            <!-- FIN: Semana de Invierno - Música -->
+
+        </div>
+    </main>
+
+    <!-- INICIO: Aviso legal y pie de página -->
+    <footer class="pie-pagina">
+        <p>&copy; 2026 Centro Cultural La Estación de Creatividad. Todos los derechos reservados.</p>
+    </footer>
+    <!-- FIN: Aviso legal y pie de página -->
+</body>
+</html>
